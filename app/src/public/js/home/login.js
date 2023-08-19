@@ -7,15 +7,16 @@ const login = () => {
         id : id.value,
         password : password.value
     };
-    console.log(req);
     fetch("/login", {
-        method : "POST",
+        method: "POST",
         headers: {
-            "Content-Type" : "application/json",
+            "Content-Type": "application/json" // 또는 "application/x-www-form-urlencoded"
         },
-        body : JSON.stringify(req)
+        body: JSON.stringify(req)
     })
-}
+    .then((res) => res.json()
+    .then((res) => {}));
+}    
 
 loginBtn.addEventListener("click", login);
  

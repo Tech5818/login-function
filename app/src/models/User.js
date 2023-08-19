@@ -11,7 +11,7 @@ class User {
 
         if(id) {
             if (id === body.id && password === body.password) {
-                return { success: ture };
+                return { success: true };
             }
             return { success: false, msg: "비밀번호가 틀렸습니다."};
         }

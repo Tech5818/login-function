@@ -25,7 +25,7 @@ const login = () => {
     .catch((error) => {
         console.error(new Error("로그인 중 에러 발생"))
     }));
-}    
+}
 
 loginBtn.addEventListener("click", login);
  
